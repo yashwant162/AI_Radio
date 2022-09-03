@@ -4,7 +4,8 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 
 class MyRadioList {
-  final List<MyRadio> radios; 
+  final List<MyRadio> radios;
+
   MyRadioList({
     required this.radios,
   });
@@ -31,7 +32,8 @@ class MyRadioList {
 
   String toJson() => json.encode(toMap());
 
-  factory MyRadioList.fromJson(String source) => MyRadioList.fromMap(json.decode(source) as Map<String, dynamic>);
+   factory MyRadioList.fromJson(String source) =>
+                                    MyRadioList.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() => 'MyRadioList(radios: $radios)';
@@ -39,8 +41,8 @@ class MyRadioList {
   @override
   bool operator ==(covariant MyRadioList other) {
     if (identical(this, other)) return true;
-  
-    return 
+
+    return
       listEquals(other.radios, radios);
   }
 
